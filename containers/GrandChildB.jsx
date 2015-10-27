@@ -1,22 +1,19 @@
 import React, { Component, PropTypes } from "react";
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
-class App extends Component {
+class GrandChildA extends Component {
   render() {
     return (
       <div>
-        <Header />
-        <Footer />
+        <h1> Grand Child B Component</h1>
       </div>
     );
   }
 }
 
 
-App.propTypes = {
+GrandChildA.propTypes = {
 };
 
 function mapStateToProps(state) {
@@ -32,4 +29,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(GrandChildA);
