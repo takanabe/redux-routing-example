@@ -28,7 +28,6 @@ class Parent extends Component {
            <li><Link to="/child_b/xxx/gchild_b">Grand Child B</Link></li>
          </ul>
         {this.props.children}
-        <Footer />
       </div>
     );
   }
