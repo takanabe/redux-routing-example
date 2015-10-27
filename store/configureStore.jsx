@@ -1,11 +1,13 @@
 import routes from '../src/routes';
 import { reduxReactRouter } from 'redux-router';
+import { devTools } from 'redux-devtools';
 import createHistory from 'history/lib/createBrowserHistory';
 import { createStore, compose} from 'redux';
 import rootReducer from '../reducers';
 
 const finalCrateStore = compose(
-  reduxReactRouter({ routes, createHistory })
+  reduxReactRouter({ routes, createHistory }),
+  devTools()
 )(createStore);
 
 export default function configureStore(initialState) {
